@@ -20,13 +20,13 @@
 
         btnFirst.addEventListener("click", () => {
             btnFirst.classList.add("green");
-
             btnThird.classList.remove("green-back")
+
             btnSecond.addEventListener("click", () => {
+                btnFirst.getAttribute("id", "btn-first");
                 btnFirst.classList.remove("green");
-
                 btnSecond.classList.add("brown");
-
+               
                 btnThird.addEventListener("click", () => {
                     btnSecond.classList.remove("brown");
 
