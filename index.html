@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="btn-first"></div>
+      <div id="btn-second"></div>
+      <div id="btn-third"></div>
+    </div>
+
+    <script>
+        const btnFirst = document.getElementById("btn-first");
+        const btnSecond = document.getElementById("btn-second");
+        const btnThird = document.getElementById("btn-third");
+
+        btnFirst.addEventListener("click", () => {
+            btnFirst.classList.add("green");
+
+            btnThird.classList.remove("green-back")
+            btnSecond.addEventListener("click", () => {
+                btnFirst.classList.remove("green");
+
+                btnSecond.classList.add("brown");
+
+                btnThird.addEventListener("click", () => {
+                    btnSecond.classList.remove("brown");
+
+                    btnThird.classList.add("green-back");
+                })
+            })
+        })
+    </script>
+  </body>
+</html>

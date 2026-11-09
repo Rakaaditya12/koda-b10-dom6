@@ -1,0 +1,47 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+}
+
+.container div {
+  border: 1px solid;
+  width: 120px;
+  height: 120px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  cursor: pointer;
+}
+
+.container div::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left: 120px;
+    margin-top: 10px;
+    border: 1px solid;
+}
+
+.green {
+    background-color: green;
+}
+
+.brown {
+    background-color: brown;
+}
+
+.green-back {
+    background-color: green;
+}
